@@ -4,6 +4,7 @@ import VideoIntroSection from './components/VideoIntroSection';
 import HeroSection from './components/HeroSection';
 import DesignSection from './components/DesignSection';
 import CarouselSection from './components/CarouselSection';
+import BusinessSection from './components/BusinessSection';
 import SolutionsSection from './components/SolutionsSection';
 import StorageSection from './components/StorageSection';
 import QuoteSection from './components/QuoteSection';
@@ -85,6 +86,7 @@ function App() {
         <HeroSection />
         <DesignSection />
         <CarouselSection />
+        <BusinessSection />
         <SolutionsSection />
         <StorageSection />
         <QuoteSection />

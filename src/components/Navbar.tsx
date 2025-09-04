@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
         </nav>
         
         {/* Desktop CTA */}
-        <a href="#quote" className="nav-cta">Empezar</a>
+        <a href="#quote" className="nav-cta">Simular</a>
         
         {/* Mobile Menu Button */}
         <button 
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           <a href="#solutions" className="mobile-nav-link" onClick={closeMenu}>Soluciones</a>
           <a href="#storage" className="mobile-nav-link" onClick={closeMenu}>Almacenamiento</a>
           <a href="#quote" className="mobile-nav-link" onClick={closeMenu}>Cotizar</a>
-          <a href="#quote" className="mobile-nav-cta" onClick={closeMenu}>Empezar</a>
+          <a href="#quote" className="mobile-nav-cta" onClick={closeMenu}>Simular</a>
         </nav>
       </div>
     </header>

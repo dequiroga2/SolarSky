@@ -28,7 +28,7 @@ const StorageSection: React.FC = () => {
           </div>
           <div className="section-image">
             <div className="edge-blend-image" data-top-color="#f9f9f9" data-bottom-color="#222b49">
-              <img src="https://images.unsplash.com/photo-1608016482831-8895cc2d8a17?q=80&w=1920&auto=format&fit=crop" alt="Sistema de almacenamiento SolarSky" />
+              <img src="/imagen3.jpg" alt="Sistema de almacenamiento SolarSky" />
               <div className="image-overlay"></div>
             </div>
           </div>

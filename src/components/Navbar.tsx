@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <header className="navbar" id="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">SolarSky</span>
+          <img src="/logo.png" alt="SolarSky Logo" className="logo-img" />
         </div>
         
         {/* Desktop Menu */}

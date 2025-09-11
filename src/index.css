@@ -89,6 +89,12 @@ body {
     letter-spacing: -0.02em;
 }
 
+.logo-img {
+    height: 1.5rem; 
+    object-fit: contain;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;

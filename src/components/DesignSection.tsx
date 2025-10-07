@@ -6,7 +6,7 @@ const DesignSection: React.FC = () => {
       <div className="container">
         <div className="section-grid reverse">
           <div className="section-image">
-            <div className="edge-blend-image" data-top-color="#222b49" data-bottom-color="#f9f9f9">
+            <div className="edge-blend-image" data-bottom-color="#f9f9f9">
               <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1920&auto=format&fit=crop" alt="Integración arquitectónica SolarSky" />
               <div className="image-overlay"></div>
             </div>

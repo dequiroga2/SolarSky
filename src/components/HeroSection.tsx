@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="hero-image">
-            <div className="edge-blend-image" data-top-color="#f9f9f9" data-bottom-color="#222b49">
+            <div className="edge-blend-image" data-top-color="#f9f9f9">
               <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1920&auto=format&fit=crop" alt="Casa con paneles solares SolarSky" />
               <div className="image-overlay"></div>
             </div>

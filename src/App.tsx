@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import VideoIntroSection from './components/VideoIntroSection';
 import HeroSection from './components/HeroSection';
@@ -8,16 +8,27 @@ import BusinessSection from './components/BusinessSection';
 import SolutionsSection from './components/SolutionsSection';
 import StorageSection from './components/StorageSection';
 import QuoteSection from './components/QuoteSection';
+import SimulationModal from './components/SimulationModal';
 import { useNavbar } from './hooks/useNavbar';
 import { useScrollAnimations } from './hooks/useScrollAnimations';
 import { useEdgeBlendImages } from './hooks/useEdgeBlendImages';
 import { useSmoothScrolling } from './hooks/useSmoothScrolling';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   useNavbar();
   useScrollAnimations();
   useEdgeBlendImages();
   useSmoothScrolling();
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     // Add loading animation for page load
@@ -80,7 +91,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar onOpenModal={handleOpenModal} />
       <main>
         <VideoIntroSection />
         <HeroSection />
@@ -91,6 +102,7 @@ function App() {
         <StorageSection />
         <QuoteSection />
       </main>
+      <SimulationModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
 }

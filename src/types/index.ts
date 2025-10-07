@@ -6,6 +6,18 @@ export interface FormData {
   description?: string;
 }
 
+export interface SimulationFormData {
+  name: string;
+  email: string;
+  phone: string;
+  monthlyConsumption: string;
+  averageBill: string;
+  installationType: string;
+  availableArea: string;
+  location: string;
+  additionalInfo?: string;
+}
+
 export interface NotificationOptions {
   message: string;
   type?: 'success' | 'info' | 'warning' | 'error';

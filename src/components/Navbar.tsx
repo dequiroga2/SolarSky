@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onOpenModal: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,6 +13,11 @@ const Navbar: React.FC = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleSimulateClick = () => {
+    onOpenModal();
+    closeMenu();
   };
 
   return (
@@ -27,7 +36,7 @@ const Navbar: React.FC = () => {
         </nav>
         
         {/* Desktop CTA */}
-        <a href="#quote" className="nav-cta">Simular</a>
+        <button onClick={onOpenModal} className="nav-cta">Simular</button>
         
         {/* Mobile Menu Button */}
         <button 
@@ -48,7 +57,7 @@ const Navbar: React.FC = () => {
           <a href="#solutions" className="mobile-nav-link" onClick={closeMenu}>Soluciones</a>
           <a href="#storage" className="mobile-nav-link" onClick={closeMenu}>Almacenamiento</a>
           <a href="#quote" className="mobile-nav-link" onClick={closeMenu}>Cotizar</a>
-          <a href="#quote" className="mobile-nav-cta" onClick={closeMenu}>Simular</a>
+          <button className="mobile-nav-cta" onClick={handleSimulateClick}>Simular</button>
         </nav>
       </div>
     </header>

@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
         <div className="hero-grid">
           <div className="hero-content">
             <h1 className="hero-title reveal-element">Iluminando el futuro</h1>
-            <p className="hero-subtitle reveal-element">Energía solar confiable y accesible. Diseñamos soluciones a medida que se integran perfectamente en hogares, negocios e industrias.</p>
+            <p className="section-text reveal-element">Energía solar confiable y accesible. Diseñamos soluciones a medida que se integran perfectamente en hogares, negocios e industrias.</p>
             <div className="hero-cta reveal-element">
               <a href="#quote" className="btn-primary">Solicitar cotización</a>
             </div>

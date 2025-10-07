@@ -20,10 +20,10 @@ const Navbar: React.FC = () => {
         
         {/* Desktop Menu */}
         <nav className="nav-menu">
-          <a href="#design" className="nav-link">Diseño</a>
-          <a href="#solutions" className="nav-link">Soluciones</a>
-          <a href="#storage" className="nav-link">Almacenamiento</a>
-          <a href="#quote" className="nav-link">Cotizar</a>
+          <a href="#design" className="nav-link">DISEÑO</a>
+          <a href="#solutions" className="nav-link">SOLUCIONES</a>
+          <a href="#storage" className="nav-link">ALMACENAMIENTO</a>
+          <a href="#quote" className="nav-link">COTIZAR</a>
         </nav>
         
         {/* Desktop CTA */}

@@ -556,9 +556,12 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.solution-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.solution-icon img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    display: block;
+    margin: auto;
 }
 
 .solution-card h3 {

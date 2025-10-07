@@ -10,19 +10,25 @@ const SolutionsSection: React.FC = () => {
         </div>
         <div className="solutions-grid">
           <div className="solution-card reveal-element" data-color="#4CAF50">
-            <div className="solution-icon">🏠</div>
+            <div className="solution-icon">
+              <img src="House Solar Energy.svg" alt="Icono casa" />
+            </div>
             <h3>Residencial</h3>
             <p>Energía limpia para tu hogar, ahorro para tu familia.</p>
             <a href="#quote" className="solution-link">Ver más</a>
           </div>
           <div className="solution-card reveal-element" data-color="#2196F3">
-            <div className="solution-icon">🏢</div>
+            <div className="solution-icon">
+              <img src="Office Solar Energy.svg" alt="Icono casa" />
+            </div>
             <h3>Edificio de oficinas</h3>
             <p>Soluciones inteligentes que potencian tu negocio y reputación.</p>
             <a href="#quote" className="solution-link">Ver más</a>
           </div>
           <div className="solution-card reveal-element" data-color="#FF9800">
-            <div className="solution-icon">🏭</div>
+            <div className="solution-icon">
+              <img src="Solar Factory.svg" alt="Icono casa" />
+            </div>
             <h3>Industrial</h3>
             <p>Potencia a gran escala para máxima eficiencia y rentabilidad.</p>
             <a href="#quote" className="solution-link">Ver más</a>

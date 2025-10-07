@@ -12,7 +12,7 @@ const BusinessSection: React.FC = () => {
   const businessItems: BusinessItem[] = [
     {
       id: 0,
-      title: "Descuentos para tu empresa",
+      title: "Descuentos para empresas",
       description: "Ofrecemos soluciones energéticas adaptadas a tu negocio, permitiéndote ahorrar hasta un 40% en costos eléctricos. Nuestro modelo te brinda acceso a tecnología solar de última generación sin inversión inicial, reduciendo tu factura desde el primer día y contribuyendo a un futuro sostenible. Además, nuestros sistemas cuentan con garantías extendidas que protegen tu inversión."
     },
     {

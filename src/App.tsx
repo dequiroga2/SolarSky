@@ -8,6 +8,7 @@ import BusinessSection from './components/BusinessSection';
 import SolutionsSection from './components/SolutionsSection';
 import StorageSection from './components/StorageSection';
 import QuoteSection from './components/QuoteSection';
+import Footer from './components/Footer';
 import SimulationModal from './components/SimulationModal';
 import { useNavbar } from './hooks/useNavbar';
 import { useScrollAnimations } from './hooks/useScrollAnimations';
@@ -102,6 +103,7 @@ function App() {
         <StorageSection />
         <QuoteSection />
       </main>
+      <Footer />
       <SimulationModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );

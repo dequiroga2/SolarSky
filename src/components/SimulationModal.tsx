@@ -198,7 +198,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
                     step="0.01"
                     required 
                   />
-                  <span className="form-hint">En pesos mexicanos (MXN)</span>
+                  <span className="form-hint">En pesos colombianos (COP)</span>
                 </div>
               </div>
             </div>

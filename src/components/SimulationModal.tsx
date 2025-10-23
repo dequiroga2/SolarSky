@@ -46,18 +46,33 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
       monthlyConsumption: formData.get('monthlyConsumption') as string,
       averageBill: formData.get('averageBill') as string,
       installationType: formData.get('installationType') as string,
-      availableArea: formData.get('availableArea') as string,
       location: formData.get('location') as string,
       additionalInfo: formData.get('additionalInfo') as string
     };
     
-    // Simulate form submission
-    setTimeout(() => {
-      showNotification('¡Excelente! Hemos recibido tu solicitud de simulación. Te contactaremos pronto con una propuesta personalizada.', 'success');
-      form.reset();
+    try {
+      // Send data to webhook
+      const response = await fetch('https://automation.luminotest.com/webhook-test/fd728c09-db91-4074-a07d-ceef16d5440e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        showNotification('¡Excelente! Hemos recibido tu solicitud de simulación. Te contactaremos pronto con una propuesta personalizada.', 'success');
+        form.reset();
+        onClose();
+      } else {
+        showNotification('Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.', 'error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      showNotification('Hubo un error al enviar tu solicitud. Por favor, intenta nuevamente.', 'error');
+    } finally {
       setIsSubmitting(false);
-      onClose();
-    }, 2000);
+    }
   };
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -184,20 +199,6 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
                     required 
                   />
                   <span className="form-hint">En pesos mexicanos (MXN)</span>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="availableArea" className="form-label">Área disponible (m²) *</label>
-                  <input 
-                    type="number" 
-                    id="availableArea"
-                    name="availableArea"
-                    placeholder="50" 
-                    className="modal-input" 
-                    min="0"
-                    step="0.1"
-                    required 
-                  />
-                  <span className="form-hint">Espacio en techo o terreno</span>
                 </div>
               </div>
             </div>

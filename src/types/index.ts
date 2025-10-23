@@ -13,7 +13,6 @@ export interface SimulationFormData {
   monthlyConsumption: string;
   averageBill: string;
   installationType: string;
-  availableArea: string;
   location: string;
   additionalInfo?: string;
 }

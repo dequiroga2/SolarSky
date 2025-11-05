@@ -198,7 +198,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
                   <span className="form-hint">Revisa tu recibo de luz</span>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="averageBill" className="form-label">Costo promedio de factura *</label>
+                  <label htmlFor="averageBill" className="form-label">Costo máximo en la factura *</label>
                   <input 
                     type="number" 
                     id="averageBill"

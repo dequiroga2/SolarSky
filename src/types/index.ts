@@ -8,6 +8,7 @@ export interface FormData {
 
 export interface SimulationFormData {
   name: string;
+  companyName: string;
   email: string;
   phone: string;
   monthlyConsumption: string;

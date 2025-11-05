@@ -41,6 +41,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
     const formData = new FormData(form);
     const data: SimulationFormData = {
       name: formData.get('name') as string,
+      companyName: formData.get('companyName') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
       monthlyConsumption: formData.get('monthlyConsumption') as string,
@@ -52,7 +53,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
     
     try {
       // Send data to webhook
-      const response = await fetch('https://automation.luminotest.com/webhook-test/fd728c09-db91-4074-a07d-ceef16d5440e', {
+      const response = await fetch('https://automation.luminotest.com/webhook-test/00a720c4-4bab-4ab9-ae53-872a5b449b7c', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -116,6 +117,16 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
                     placeholder="Juan Pérez" 
                     className="modal-input" 
                     required 
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="companyName" className="form-label">Nombre de la empresa</label>
+                  <input 
+                    type="text" 
+                    id="companyName"
+                    name="companyName"
+                    placeholder="Mi Empresa S.A.S." 
+                    className="modal-input"
                   />
                 </div>
                 <div className="form-group">

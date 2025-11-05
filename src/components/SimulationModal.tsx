@@ -53,7 +53,7 @@ const SimulationModal: React.FC<SimulationModalProps> = ({ isOpen, onClose }) =>
     
     try {
       // Send data to webhook
-      const response = await fetch('https://automation.luminotest.com/webhook-test/00a720c4-4bab-4ab9-ae53-872a5b449b7c', {
+      const response = await fetch('https://automation.luminotest.com/webhook/00a720c4-4bab-4ab9-ae53-872a5b449b7c', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
